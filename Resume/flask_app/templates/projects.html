@@ -1,0 +1,26 @@
+{% extends 'shared/layout.html' %}
+
+        <!-- Main Section of HTML -->
+{% block maincontent %}
+    <main>
+        <h2 class="text font">The content of this page includes my projects I have worked on throughout my Website Development course at
+            Michigan State University.  I hope you enjoy!
+        </h2>
+        <div class="wrapper">
+            <div class="box" style="flex:1">
+                <a href="/piano">
+                    <img class="image" src="../static/main/images/piano.jpeg" alt="Grand Piano" loading="lazy">
+                </a>
+            </div>
+            <div class="box scroll font" style="flex:1">
+                <p>Through the use of javascript and html, I created a playable piano.  You can use your keyboard to play different
+                    songs of your choice.  If you cannot figure out what piano keys go to which key on the keyboard don't worry!  If 
+                    you hover your mouse over any of the keys you will be about to see the mapping of each key.  Lastly, try out
+                    different sayings for a fun surprise!
+                </p>
+                <p> Hint: W _ S _ _ Y _ _ </p>
+            </div>
+        </div>
+
+</main>
+{% endblock %}

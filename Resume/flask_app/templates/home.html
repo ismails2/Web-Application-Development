@@ -1,0 +1,35 @@
+{% extends 'shared/layout.html' %}
+
+
+{% block extracss %}
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+{% endblock %}
+
+{% block maincontent %}
+<main>
+  <h2 class="text"> Sara Ismail </h2>
+  <div class="wrapper">
+      <div class="box" style="flex:1">
+          <p>
+              <img class="image" src="../static/main/images/sara-ismail.jpeg" alt="Image of Sara Ismail" loading="lazy">
+          </p>
+      </div>
+      <div class="box scroll font" style="flex:1">
+          <p>Hi everyone! My name is Sara Ismail. I am a junior at Michigan State University with a 
+              projected graduation date of May 2023. I am studying Computer Science, with a minor in 
+              Cognitive Science. I am currently a Undergraduate Learning Assistant for an Intro to Programming 
+              Class that is based in Python.  In the past, I worked as a Quality Development Scholar at HELLA 
+              Electronic Corporation insuring well developed and safe products.</p>
+
+          <p>In my free time I enjoy a lot of different hobbies.  Cooking and Baking are some of my favorite pass
+              times.  Each week you can find me trying to cook a new recipe or learn a new baking technique. When 
+              I am not in the kitchen you can find my on playing all different types of games.  My favorites are 
+              Geoguesser, Tetris, and Sudoku!
+          </p>
+      </div>
+  </div>
+  
+  <h3 class="text font">A fun fact about me: <b>{{fun_fact}}</b> </h3> 
+</main>
+
+{% endblock %}

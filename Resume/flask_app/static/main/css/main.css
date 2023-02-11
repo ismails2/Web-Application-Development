@@ -1,0 +1,50 @@
+/* Main CSS File */
+body {
+    margin:0
+}
+
+.hw-title {
+    color: #ffffff;
+    padding-top: -2%;
+    padding-bottom: 2%;
+    margin-top: -4%;
+    z-index: 3;
+}
+
+.text {
+    text-align: center;
+    text-align-last: justify;
+}
+
+.font {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+    max-height: 50vh;
+    align-self: center;
+}
+
+.box{
+    padding: 3%;
+    margin: 0.2%;
+    float: left;
+    margin-left: auto;
+}
+
+.scroll{
+    overflow: scroll;
+    float: right;
+}
+
+.image{
+    margin-left: 40%;
+    width:50%;
+    height:50%;
+    object-fit: contain;
+}
+
+

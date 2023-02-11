@@ -1,0 +1,4 @@
+"inst_id","type","name","department","address","city","state","zip"
+"1","Academia","Michigan State University","Computer Science",NULL,"East Lansing","Michigan",NULL
+"2","Industry","HELLA Electronics Corp.","Quality Development",NULL,"Northville","Michigan",NULL
+"3","Industry","Advanced Avionic Inc.",NULL,NULL,"Ann Arbor","Michigan",NULL

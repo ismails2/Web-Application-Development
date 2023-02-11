@@ -1,0 +1,14 @@
+{% extends 'shared/layout.html' %}
+
+<!-- Main content for Feedback Page -->
+
+{% block maincontent %}
+    <div>
+    {% for dict in val %}
+        <h2>{{ dict['name']}}'s Feedback: </h2>
+        <h3>Comment: "{{ dict['comment']}}" </h3>
+        <h4>Email: {{ dict['email']}} </h4>
+        <hr>
+    {% endfor  %}
+    </div>
+{% endblock %}

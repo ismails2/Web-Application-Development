@@ -1,0 +1,93 @@
+<!-- FILL ME IN WITH CODE FOR YOUR PAGE LAYOUT -->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sara Ismail</title>
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/feedback.css') }}">
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/favicon.ico') }}">
+  {% block extracss %}{% endblock %}
+  <script src="{{ url_for('static', filename='main/js/main.js') }}" defer></script>
+  {% block extrajs %}{% endblock %}
+</head>
+
+<body>
+    <article>
+    <!-- The header  -->
+    <header>
+      <banner>
+          <img class="banner-image" src="static/main/images/background.jpeg" alt="Detroit River and Bridge" loading="lazy">
+      </banner>
+    </header>
+
+    <!-- The navigation bar -->
+    
+    <nav>
+      <div id="navbar">
+
+        <div class="nav-section" id="normal">
+            <div class="full">
+                <a class="nav-link big font" href="/resume">RESUME</a>
+                <a class="nav-link big font" href="/home">HOME</a>
+                <a class="nav-link big font" href="/projects">PROJECTS</a>
+                <a class="nav-link big font" href="https://www.linkedin.com/in/sara-ismail-60778b1b3/"> 
+                    <img class="nav-image link-image nav-link" src="../../static/main/images/social-linkedin.png"  alt="Linkedin Icon" loading="lazy">
+                </a>
+            </div>
+            <div class="dropdown">
+                <input class="nav-bar-image" id="dropbtn" type="image" src="../../static/main/images/menu-bar.png" alt="nav drop down" onclick="getElementById('dropdown-content').style.display = 'block';">
+            </div>
+        </div>
+        <div id="dropdown-content">
+            <a class="nav-link linkedin small font" href="https://www.linkedin.com/in/sara-ismail-60778b1b3/"> LinkedIn</a>
+            <a class="nav-link small font" href="/resume">RESUME</a>
+            <a class="nav-link small font" href="/home">HOME</a>
+            <a class="nav-link small font" href="/projects">PROJECTS</a>
+        </div>
+        <div class="hw-title font">
+          <p>CSE 477 - Homework 2</p>
+        </div>
+      </div>
+    
+    </nav>
+
+    <button id="open-button">Feedback</button> 
+
+    <div class="form-popup centered" id="myForm">
+      <form action="/processfeedback" method="POST" enctype="multipart/form-data" class="form-container">
+        <h1>Enter Comment</h1>
+          <input class="con-text"  type="text" placeholder="Enter Name" name="name" required>
+          <input class="con-text"  type="text" placeholder="Enter Email" name="email" required>
+          <input class="con-text" type="text" placeholder="Enter comment" name="comment" required>
+          <div class="buttons"> 
+            <button type="submit" class="btn"><a href="/processfeedback"></a><a>Submit</a></button>
+            <button type="button" id="close-btn" class="btn cancel"><a>Close</a></button>
+          </div>
+      </form>
+    </div>
+
+
+    <!-- The main content  -->
+    <main>
+      {% block maincontent %}{% endblock %}
+    </main>
+
+    <!-- The footer of the file -->
+    <footer>
+      <div>
+        <footer class="footer-container">
+          <p class="footer-text">© 2022 Sara Ismail</p>
+        </footer>
+      </div>
+    </footer>
+
+    </article>
+  
+</body>
+
+</html>
