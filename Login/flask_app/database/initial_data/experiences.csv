@@ -1,0 +1,5 @@
+"experience_id","position_id","name","description","hyperlink","start_date","end_date"
+"1","1","Lab Instructor","Provide weekly lab presentation to student to reiterate fundimental programming skills",NULL,"2020-05-03",NULL
+"2","1","Helproom/Office Hours","Parse through student's codes to quickly find and solve errors, while also giving further explanations if needed",NULL,"2020-05-03",NULL
+"3","2","Cross-Domain Audits","Worked with co-workers from non-technical backgrounds to explain gaps in industry standards",NULL,"2019-06-03","2022-01-03"
+"4","3","Product Development","Implemented classes and instances of objects to create simple, reusable code",NULL,"2022-01-07",NULL

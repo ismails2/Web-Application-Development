@@ -1,0 +1,90 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+<style> 
+h1{
+    margin-left: 47%;
+}
+
+#chat {
+  margin-left: 20%;
+  width: 60%;
+  height: 350px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  overflow-y:auto;
+}
+
+.message{
+    margin-left: 45%;
+}
+
+</style>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket;
+    
+
+    $(document).ready(function(){
+        
+        socket = io.connect('http://' + document.domain + ':' + location.port + '/chat');
+        socket.on('connect', function() {
+            socket.emit('joined', {});
+        });
+        
+        
+        socket.on('status', function(data) {     
+            let tag  = document.createElement("p");
+            let text = document.createTextNode(data.msg);
+            let element = document.getElementById("chat");
+            tag.appendChild(text);
+            tag.style.cssText = data.style;
+            element.appendChild(tag);
+            $('#chat').scrollTop($('#chat')[0].scrollHeight);
+
+        });    
+
+        
+
+    });
+
+</script>
+<script type="text/javascript" charset="utf-8">
+    function OnClick() {
+        socket.emit('left', {});
+        window.location.href = "/home";
+    }
+    function OnEnter() {
+        socket.emit('my event', {'user': user, 'msg': text});
+    }
+</script>
+{% endblock %}
+
+
+{% block maincontent %}
+<h1>Chat</h1>
+
+<div id='chat' contenteditable>    
+</div>
+
+<p class="email">
+    <form>
+        <input class="message" placeholder="Enter Your Message Here" id="text" />
+        <input type="submit" value="Enter" onclick="OnEnter()"/><br>
+    </form>
+</p>
+
+<div class="container">
+    <button class=login type="submit" onclick="OnClick()">Leave Room</button>
+</div> 
+
+{% endblock %}

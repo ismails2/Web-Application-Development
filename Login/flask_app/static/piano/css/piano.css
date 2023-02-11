@@ -1,0 +1,124 @@
+#background{
+  position: relative;
+  margin: 0%;
+  left: 20%;
+  width: 60vw;
+  height: 60vh;
+  background: #549cbd;
+  border-radius: 5%;
+  z-index: 0;
+}
+
+#awoken {
+  display: none;
+  width: 100%;
+  height: 100%;
+  transition: none;
+  object-fit: cover;
+  position: relative;
+  align-items: center;
+}
+
+#old-image{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+#keys{
+    visibility: visible;
+    display: block;
+}
+
+.key{
+  float: left;
+  position: relative;
+  width: 3vw;
+  height: 30vh;
+  margin: 0 0.2% 0.2% 0;
+  background: #ffffff;
+  visibility: inherit;
+  z-index: 1;
+}
+.blackkeys{
+  width: 2vw;
+  height: 20vh;
+  margin: 0;
+  z-index: 2;
+  background:#000000;
+  visibility: inherit;
+  position: relative;
+}
+
+.notes{
+  font-size: 1vw;
+  color: #549cbd;
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+  opacity: 0%;
+  left: 1vw;
+}
+
+#note1{
+  left: 14vw;
+  bottom: -15vh;
+}
+#note2{
+  left: 12vw;
+  bottom: -15vh;
+}
+#note3, #note4{
+  left: 10vw;
+  bottom: -15vh;
+}
+
+#note5{
+  left: 8vw;
+  bottom: -15vh;
+}
+#note6{
+  left: 6vw;
+  bottom: -15vh;
+}
+#note7, #note8{
+  left: 4vw;
+  bottom: -15vh;
+}
+#note9{
+  left: 2vw;
+  bottom: -15vh;
+}
+#note10{
+  left: 0vw;
+  bottom: -15vh;
+}
+
+#bnote1{
+  left: 13vw;
+  bottom: -15vh;
+}
+#bnote2{
+  left: 11vw;
+  bottom: -15vh;
+}
+#bnote3{
+  left: 9vw;
+  bottom: -15vh;
+}
+#bnote4{
+  left: 7vw;
+  bottom: -15vh;
+}
+#bnote5{
+  left: 5vw;
+  bottom: -15vh;
+}
+#bnote6{
+  left: 3vw;
+  bottom: -15vh;
+}
+#bnote7{
+  left: 1vw;
+  bottom: -15vh;
+}

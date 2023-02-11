@@ -1,0 +1,58 @@
+{% extends 'shared/layout.html' %}
+
+{% block headercontent %}
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='static/main/css/header.css'>
+</head>
+{% endblock %}
+
+
+{% block maincontent %}
+<br><br>
+<!-- <input type="none" value=" Login as Owner" onclick="checkCredentials()" /> -->
+
+<h1> Sign Up </h1>
+
+<form action="/processsignin" method="POST" enctype="multipart/form-data">
+  
+    <div class="container">
+      <label class=usertxt for="email"><b>Username</b></label>
+      <input class=userinput type="text" placeholder="Enter Email" name="email" required>
+  
+      <label class=passtxt for="password"><b>Password</b></label>
+      <input class=passinput type="password" placeholder="Enter Password" name="password" required>
+  
+      <button class=login type="submit">Sign up</button>
+
+    </div>
+</form>
+
+{% endblock %}
+
+
+
+{% block scriptcontent %}
+
+<script>
+let count     = 0
+function checkCredentials() {
+    // package data in a JSON object
+    var data_d = {'email': 'owner@email.com', 'password': 'password'}
+    console.log('data_d', data_d)
+
+    // SEND DATA TO SERVER VIA jQuery.ajax({})
+    jQuery.ajax({
+        url: "/home",
+        data: data_d,
+        type: "POST",
+        success:function(retruned_data){
+              retruned_data = JSON.parse(retruned_data);
+              window.location.href = "/home";
+            }
+    });
+}
+</script>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+/* Footer css file */
+
+.footer-container {
+  text-align: center;
+  padding: 1%;
+  margin-top: 10%;
+  background-color: #4c7c7c;
+}
+
+.footer-text {
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+}

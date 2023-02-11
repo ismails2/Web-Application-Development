@@ -1,0 +1,68 @@
+{% extends 'shared/layout.html' %}
+
+{% block extrajs %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+{% block headercontent %}
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8">
+</head>
+{% endblock %}
+
+{% block maincontent %}
+<br><br>
+<!-- <input type="none" value=" Login as Owner" onclick="checkCredentials()" /> -->
+
+<h1> Login </h1>
+
+<form action="/processlogin" method="POST" enctype="multipart/form-data">
+  
+    <div class="container">
+      <label class=usertxt for="email"><b>Username</b></label>
+      <input class=userinput type="text" placeholder="Enter Email" name="email" required>
+  
+      <label class=passtxt for="password"><b>Password</b></label>
+      <input class=passinput type="password" placeholder="Enter Password" name="password" required>
+  
+      <button class=login type="submit" onclick="checkCredentials()">Login</button>
+
+    </div>  
+    <div>
+    {% if user == 'Unknown' %}  
+    <p>CSE 477 - Homework 3</p>
+    {% else %}
+    <p>Logged in as {{user}}</p>
+    {% endif %}
+    <br>
+    {% if failed_attempts != 0 %}  
+    <p>num failed attempts: {{failed_attempts}}</p>
+    {% endif %}
+    <br>
+</form>
+
+
+<script>
+let count     = 0
+function checkCredentials() {
+    // package data in a JSON object
+    var data_d = {'email': 'owner@email.com', 'password': 'password'}
+    console.log('data_d', data_d)
+
+    // SEND DATA TO SERVER VIA jQuery.ajax({})
+    jQuery.ajax({
+        url: "/processlogin",
+        data: data_d,
+        type: "POST",
+        success:function(retruned_data){
+              retruned_data = JSON.parse(retruned_data);
+              window.location.href = "/home";
+            }
+    
+    });
+}
+</script>
+{% endblock %}
+
+

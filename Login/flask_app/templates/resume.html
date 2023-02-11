@@ -1,0 +1,101 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}
+  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/resume.css') }}">
+{% endblock %}
+
+
+{% block maincontent %}
+    <div id="resume-page">
+      <div id="resume-block">
+        <h1 id="resume-title">Resume: Sara Ismail</h1>
+      </div>
+      <!-- For each institution - generate a row  -->
+      {% for inst_id, inst in resume_data.items() %}
+      <div class="institution-block">
+        
+      <!-- Do something... -->
+        <h1 class="name-institution">{{ inst['name']}} </h1>
+        {% if inst['department'] != None %}
+          <h2>{{inst['department']}}</h2>
+        {% endif %}
+        {% if inst['department'] == None %}
+        <h2></h2>
+        {% endif %}
+        <h2>{{inst['type']}}</h2>
+        <div class="right-justified">
+          {% if inst['address'] != None %}
+            <h2>{{inst['address']}}</h2>
+          {% endif %}
+          {% if inst['city'] != None %}
+            <h2 class="city-institution">{{inst['city']}},</h2>
+          {% endif %}
+          {% if inst['state'] != None %}
+            <h2 class="state-institution">{{inst['state']}}</h2>
+          {% endif %}
+          {% if inst['zip'] != None %}
+            <h2>{{inst['zip']}}</h2>
+          {% endif %}
+        </div>
+        {% if inst['positions'] != {} %}
+          <!--For each position in an institution-->
+          {% for pos_id, pos in inst['positions'].items() %}
+            <hr>
+            <!-- Do something else... -->
+            <div class="position-text">
+              <h2>{{ pos['title']}} </h2>
+              <div class="position-res">
+                <h3>{{ pos['responsibilities']}} </h3>
+              </div>
+              <div class="right-justified">
+                <h3>Start date: {{ pos['start_date']}} </h3>
+                {% if pos['end_date'] != None %}
+                  <h3>End date: {{ pos['end_date']}} </h3>
+                {% endif %}
+                {% if pos['end_date'] == None %}
+                  <h3>End date: currently working here </h3>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if pos['experiences'] != {} %}
+              <!--For each experience at a position-->
+              {% for exp_id, exp in pos['experiences'].items() %}
+                <div class="experience-text">
+                  <h3>{{ exp['name']}} </h3>
+                </div>
+                <h4>{{ exp['description']}} </h4>
+                {% if exp['hyperlink'] != None %}
+                  <h4>{{ exp['hyperlink']}} </h4>
+                {% endif %}
+                <div class="right-justified experience-text">
+                  <h4>Start date: {{ exp['start_date']}} </h4>
+                  {% if exp['end_date'] != None %}
+                  <h4>End date: {{ pos['end_date']}} </h4>
+                  {% endif %}
+                  {% if exp['end_date'] == None %}
+                  <h4></h4>
+                  {% endif %}
+                </div>
+                {% if exp['skills'] != {} %}
+                 <!--For each skill at the experience-->    
+                 {% for skill_id, skill in exp['skills'].items() %}
+                  <div class = 'skill-section'>
+                    <h4 >Skill: {{ skill['name']}} </h4>
+                    <h4 >Rating: {{ skill['skill_level']}} </h4>
+                  </div>
+                 {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <hr>
+      </div>
+      {% endfor %}
+    </div>
+
+
+{% endblock %}
+
+

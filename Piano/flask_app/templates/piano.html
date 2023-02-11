@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head Section of HTML -->
+    <head>
+        <title>Piano Page | Sara Ismail</title>
+        <meta charset="utf-8">       
+        <link rel="stylesheet" href="../static/main/css/header.css">
+        <link rel="stylesheet" href="../static/main/css/navbar.css">
+        <link rel="stylesheet" href="../static/main/css/main.css">
+        <link rel="stylesheet" href="../static/main/css/footer.css">
+        <link rel="stylesheet" href="../static/piano/css/piano.css">
+       
+    </head>
+    <!-- Body Section of HTML -->
+    <body id="web">
+
+        <!-- Header Section of HTML -->
+        <header>
+            <banner>
+                <img class="banner-image" src="../static/main/images/background.jpeg" alt="Detroit River and Bridge" loading="lazy">
+            </banner>
+        </header>
+        
+        <!-- Navbar Section of HTML -->
+        <nav id="navbar">
+            <div class="nav-section" id="normal">
+                <div class="full">
+                    <a class="nav-link big font" href="../static/main/Sara Ismail - 2021.pdf">RESUME</a>
+                    <a class="nav-link big font" href="home.html">HOME</a>
+                    <a class="nav-link big font" href="projects.html">PROJECTS</a>
+                    <a class="nav-link big font" href="https://www.linkedin.com/in/sara-ismail-60778b1b3/"> 
+                        <img class="nav-image link-image nav-link" src="../static/main/images/social-linkedin.png"  alt="Linkedin Icon" loading="lazy">
+                    </a>
+                </div>
+                <h1 class="nav-words big">Homework 1</h1>
+                <div class="dropdown">
+                    <input class="nav-bar-image" id="dropbtn" type="image" src="../static/main/images/menu-bar.png" alt="nav drop down" onclick="getElementById('dropdown-content').style.display = 'block';">
+                </div>
+            </div>
+            <div id="dropdown-content">
+                <a class="nav-link linkedin small font" href="https://www.linkedin.com/in/sara-ismail-60778b1b3/"> LinkedIn</a>
+                <a class="nav-link small font" href="../static/main/Sara Ismail - 2021.pdf">RESUME</a>
+                <a class="nav-link small font" href="home.html">HOME</a>
+                <a class="nav-link small font" href="projects.html">PROJECTS</a>
+            </div>
+        </nav>
+        
+        <!-- Main Section of HTML -->
+        <main>
+            <h2 class="text font"> "Behold piano great and old, it's master slumbers in far off cold, If you wish to see anew, call out to it - we see you." </h2>
+        
+            <div id="background">
+                <div id="keys">
+                    <h1 class="font text">The Old One</h1>
+                    <div class="key whitekeys" data-key="65" id="note1">
+                        <a class="notes">A</a>
+                    </div>
+                    <div class="key blackkeys black" data-key="87" id="bnote1">
+                        <a class="notes">W</a>
+                    </div>
+                    <div class="key whitekeys" data-key="83" id="note2">
+                        <a class="notes">S</a>
+                    </div>
+                    <div class="key blackkeys black" data-key="69" id="bnote2">
+                        <a class="notes">E</a>
+                    </div>
+                    <div class="key whitekeys" data-key="68" id="note3">
+                        <a class="notes">D</a>
+                    </div>
+                    <div class="key whitekeys" data-key="70" id="note4">
+                        <a class="notes">F</a>
+                    </div>
+                    <div class="key blackkeys black" data-key="84" id="bnote3">
+                        <a class="notes">T</a>
+                    </div>
+                    <div class="key whitekeys" data-key="71" id="note5">
+                        <a class="notes">G</a>
+                    </div>
+                    <div class="key blackkeys black" data-key="89" id="bnote4">
+                        <a class="notes">Y</a>
+                    </div>
+                    <div class="key whitekeys" data-key="72" id="note6">
+                        <a class="notes">H</a>
+                    </div>
+                    <div class="key blackkeys black" data-key="85" id="bnote5">
+                        <a class="notes">U</a>
+                    </div>
+                    <div class="key whitekeys" data-key="74" id="note7">
+                        <a class="notes">J</a>
+                    </div>
+                    <div class="key whitekeys" data-key="75" id="note8">
+                        <a class="notes">K</a>
+                    </div>
+                    <div class="key blackkeys black" data-key="79" id="bnote6">
+                        <a class="notes">O</a>
+                    </div>
+                    <div class="key whitekeys" data-key="76" id="note9">
+                        <a class="notes">L</a>
+                    </div>
+                    <div class="key blackkeys black" data-key="80" id="bnote7">
+                        <a class="notes">P</a>
+                    </div>
+                    <div class="key whitekeys" data-key="186" id="note10">
+                        <a class="notes">;</a>
+                    </div>
+                </div>
+                <div id="awoken">
+                    <h1 class="font text">I have awoken.</h1>
+                    <img id="old-image" src="../static/piano/images/texture.jpeg" alt="The Great Old One" loading="lazy">
+                </div>
+                
+            </div>
+        </main>
+        
+        <!-- Footer Section of HTML -->
+        <footer class="footer-container">
+            <p class="footer-text">©Sara Ismail</p>
+        </footer>
+
+        <script type="module" src="../static/piano/js/piano.js"></script>
+    </body>
+</html>

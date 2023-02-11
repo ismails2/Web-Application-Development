@@ -1,0 +1,96 @@
+/*Resume CSS File*/
+
+/* Resume Title */
+#resume-page {
+    margin-left: 6%;
+    margin-right: 6%;
+    color: #77bada;
+    font-size: 100%;
+}
+
+#resume-block {
+    margin: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#resume-title {
+    font-size: 200%;
+    color: #5597b6;
+    text-decoration: underline;
+    margin-top: 2%;
+}
+
+.right-justified {
+    text-align: right;
+    margin-top: -6%;
+}
+
+.resume-text {
+    text-align: left;
+    margin-left: 6%;
+}
+
+/* Institution Information */
+
+.institution-block {
+    background-color: #394348;
+    margin-top: 0%;
+}
+
+.name-institution {
+    text-align: center;
+    font-size: 200%;
+    margin-top: 1.5%;
+}
+
+.state-institution {
+    margin-top: -2%;
+}
+
+.city-institution{
+    font-size:160%;
+    margin-top: -4%;
+    margin-left: 70%;
+}
+
+/* Position Section */
+
+.position-res {
+    margin-top: -1.5%;
+}
+
+.position-text {
+    color: #f1f8fc;
+}
+
+
+/* Experience Section */
+
+.experience-text {
+    color: #afe2e2;
+}
+
+/* Skill Section */
+
+.skill-section {
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+/* Modifications for screen size*/
+
+@media screen and (max-width: 1250px) {
+    #resume-page {
+      font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #resume-page {
+      font-size: 20%;
+    }
+}
+
+
+  
